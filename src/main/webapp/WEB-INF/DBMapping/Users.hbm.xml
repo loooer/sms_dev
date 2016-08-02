@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.yyh.cj.model.Users" table="users" catalog="sms"><!-- datalog用于指定连接数据库 -->
+		<id name="userId" type="java.lang.Integer">
+			<column name="userId"></column>
+			<generator class="identity"></generator><!-- identity:由底层数据库生成标识符 -->
+		</id>
+		<property name="name" type="string">
+			<column name="name" length="50" not-null="true" />
+		</property>
+		<property name="password">
+			<column name="password" length="50" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
