@@ -9,7 +9,7 @@
    http://www.springframework.org/schema/context/spring-context.xsd
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-   		<import resource="BeanLocations.xml"/><!-- 引入所有需要的spring配置文件 -->
+   		<import resource="classpath:BeanLocations.xml"/><!-- 引入所有需要的spring配置文件 -->
    		<mvc:annotation-driven/> 
         <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
         <mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
