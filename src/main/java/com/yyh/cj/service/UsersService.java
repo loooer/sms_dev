@@ -6,4 +6,5 @@ import com.yyh.cj.model.Users;
 
 public interface UsersService {
 	List<Users> UsersQuery();
+	List<Object> getAllUsers();
 }

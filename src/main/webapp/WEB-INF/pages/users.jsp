@@ -6,7 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${name }
-${password }
+${users }
 </body>
 </html>

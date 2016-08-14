@@ -12,14 +12,14 @@
    <!-- databases config -->
    <import resource="dataSource.xml"/>
    <!-- databases mapping -->
-  <!--  <import resource="hibernate.xml"/> -->
+   <import resource="hibernate.xml"/>
    <!-- beans config -->
 	<!-- jdbc注入 -->  
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
         <property name="dataSource" ref="dataSource" />   
     </bean> 
    <bean id="usersDao" class="com.yyh.cj.dao.UsersDaoImpl">
-   	   <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+   	   <property name="sessionFactory" ref="sessionFactory"></property>
    </bean>
    <bean id="usersService" class="com.yyh.cj.service.UsersServiceImpl">
    		<property name="usersDao" ref="usersDao"></property>

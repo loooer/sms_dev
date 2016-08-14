@@ -10,7 +10,7 @@
    http://www.springframework.org/schema/mvc 
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<context:property-placeholder location="classpath:database.properties" />
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"><!-- apache dbcp 数据源 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"><!-- apache dbcp 数据源 -->
 		<property name="driverClassName" value="${dataSource.driverClassName}" />
 		<property name="url" value="${dataSource.url}" />
 		<property name="username" value="${dataSource.username}" />
